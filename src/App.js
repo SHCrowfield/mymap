@@ -15,10 +15,10 @@ function App() {
   return (
 <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/person" element={<Person />} />
-        <Route path="/hotels" element={<List />} />
-        <Route path="/hotels/:id" element={<Hotel />} />
+        <Route path="/mymap" element={<Home />} />
+        <Route path="/mymap/person" element={<Person />} />
+        <Route path="/mymap/hotels" element={<List />} />
+        <Route path="/mymap/hotels/:id" element={<Hotel />} />
       </Routes>
     </BrowserRouter>
   );
