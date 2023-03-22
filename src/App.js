@@ -1,8 +1,26 @@
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+
+} from "react-router-dom";
+ 
+import List from "./pages/list/List";
+import Hotel from './pages/hotel/Hotel';
+import Home from "./pages/home/Home";
+import Person from "./pages/person/Person";
+
+
 function App() {
   return (
-    <div>
-      Hello world!
-    </div>
+<BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/person" element={<Person />} />
+        <Route path="/hotels" element={<List />} />
+        <Route path="/hotels/:id" element={<Hotel />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
