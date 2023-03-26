@@ -44,7 +44,7 @@ const Header = ({type}) => {
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faUser} />
   
-            <Link to="/person">Adataim</Link>
+            <Link to="/mymap/person">Adataim</Link>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faBook} />
