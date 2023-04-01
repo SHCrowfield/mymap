@@ -43,24 +43,23 @@ const Header = ({type}) => {
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faUser} />
-  
-            <Link to="/mymap/person" className="link">Adataim</Link>
+            <Link to="/mymap/person" className="link"></Link>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faBook} />
-            <span>Doku-tár</span>
+            <span></span>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faPerson} />
-            <span>Személyiség-tár</span>
+            <span></span>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faImage} />
-            <span>Fotó-tár</span>
+            <span></span>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faLightbulb} />
-            <span>Idea-tár</span>
+            <span></span>
           </div>
         </div>
         {type !== "list" &&

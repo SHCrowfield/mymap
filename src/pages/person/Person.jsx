@@ -6,7 +6,7 @@ import bb from "./bb.png"
 
 function Person() {
 
-    const user = {
+    const user1 = {
 
         uImg: pp,
         nev: "Pályakezdő Péter",
@@ -24,7 +24,7 @@ function Person() {
 
     };
 
-    const user1 = {
+    const user = {
 
         uImg: bb,
         nev: "Bizonytalan Bence",
