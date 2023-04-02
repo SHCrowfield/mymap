@@ -1,0 +1,20 @@
+.regContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+  margin: 30px;
+}
+
+.btn{
+    margin: 10px;
+}
+
+.label{
+    font-size: 40px;
+}

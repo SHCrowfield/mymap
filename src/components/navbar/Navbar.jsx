@@ -7,8 +7,8 @@ const Navbar = () => {
         <div className="navContainer"> 
             <Link to="/mymap" className="logo">.Mymap</Link>
             <div className="navItems">
-                <button className="navButton">Regisztráció</button>
-                <button className="navButton">Belépés</button>
+            <Link to="/mymap/registracion" className="logo"><button className="navButton">Bejelentkezés/Regisztráció</button></Link>
+ 
             </div>
         </div>
     </div>

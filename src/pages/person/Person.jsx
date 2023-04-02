@@ -44,7 +44,7 @@ function Person() {
 
 
     return (
-        <div><Navbar /><Header type="list" />
+        <div><Navbar /><Header/>
             <div className="personContainer">
                 <div className="leftSide">
                     <img src={user.uImg} alt="" className="personImg" />
