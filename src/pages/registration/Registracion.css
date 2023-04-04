@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
 }
-.login{
+.login, .registracion{
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -12,7 +12,13 @@
 }
 
 .btn{
+    background: #26C36C;
+    color: #000;
     margin: 10px;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .label{

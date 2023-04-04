@@ -1,11 +1,12 @@
-.header{
+.header {
     background-color: #26C36C;
-    color:white;
+    color: white;
     display: flex;
     justify-content: center;
     position: relative;
 }
-.headerContainer{
+
+.headerContainer {
     width: 100%;
     max-width: 1024px;
     margin: 20px 0px 5px 0px;
@@ -13,7 +14,7 @@
 
 
 
-.headerList{
+.headerList {
     display: flex;
     gap: 40px;
     margin-bottom: 50px;
@@ -22,31 +23,32 @@
     margin: auto;
 }
 
-.headerListItem{
+.headerListItem {
+    position: relative;
     display: flex;
     align-items: center;
     /*gap: 10px;*/
-   cursor: pointer;
-   justify-content: center;
+    cursor: pointer;
+    justify-content: center;
 }
 
-.headerListItem.active{
-  border: 1px solid white;
-  padding: 10px;
-  border-radius: 20px;
+.headerListItem.active {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 
-.link{
-color: white;
-text-decoration: none;
+.link {
+    color: white;
+    text-decoration: none;
 }
 
-.headerDescription{
+.headerDescription {
     margin: 20px 0px;
 }
 
-.headerBtn{
+.headerBtn {
     background-color: #ff8000;
     font-weight: 500;
     border: none;
@@ -54,7 +56,7 @@ text-decoration: none;
     cursor: pointer;
 }
 
-.headerSearch{
+.headerSearch {
     height: 30px;
     background-color: white;
     border: 3px solid #ff8000;
@@ -69,65 +71,66 @@ text-decoration: none;
     max-width: 1024px;
 }
 
-.headerIcon{
+.headerIcon {
     color: lightgray
 }
 
-.headerSearchItem{
+.headerSearchItem {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.headerSearchInput{
-    border:none;
+.headerSearchInput {
+    border: none;
     outline: none;
 }
-.headerSearchText{
+
+.headerSearchText {
     color: lightgray;
     cursor: pointer;
 }
 
-.date{
+.date {
     position: absolute;
     top: 50px;
     z-index: 2;
 }
 
-.options{
- position: absolute;
- top: 50px;
- background-color: white;
- color: gray;   
- border-radius: 5px;
- box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.4);
- z-index: 2;
+.options {
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    color: gray;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    z-index: 2;
 }
 
-.optionItem{
+.optionItem {
     width: 200px;
     display: flex;
     justify-content: space-between;
     margin: 10px;
 }
 
-.optionCounter{
-display: flex;
-align-items: center;
-gap: 10px;
-font-size: 12px;
-color: black;
+.optionCounter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
 }
 
-.optionCounterButton{
+.optionCounterButton {
     width: 30px;
     height: 30px;
     border: 1px solid #ff8000;
-    color:#ff8000;
+    color: #ff8000;
     cursor: pointer;
     background-color: white;
 }
 
-.optionCounterButton:disabled{
-cursor: not-allowed;
+.optionCounterButton:disabled {
+    cursor: not-allowed;
 }
