@@ -14,11 +14,12 @@ function Registracion() {
     const [city, setCity] = useState('');
     const [street, setStreet] = useState('');
     const [postcode, setPostcode] = useState('');
+    const [active] = useState(true);
     const [isPending, setIsPending] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const reg = { identifier, password, fname, lname, tel, email, country, city, street, postcode };
+        const reg = { identifier, password, fname, lname, tel, email, address:{ country, city, street, postcode}, active };
         setIsPending(true);
         console.log(reg);
 

@@ -16,6 +16,10 @@ const Home = () => {
         <PropertyList />
         <FeaturedProperties />
         <MailList/>*/}
+        <div className="background">
+          <span className="myMap">MyMAP</span>
+          <img src="https://thumbs.dreamstime.com/z/old-new-life-highway-signs-road-sign-pointing-to-choices-arrows-51231821.jpg" alt="" className="backImg" />
+        </div>
       </div>
     </div>
 
