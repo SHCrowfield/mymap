@@ -23,18 +23,30 @@ function Registracion() {
         setIsPending(true);
         console.log(reg);
 
+        /*
         fetch('http://localhost:7070/api/admin/customers/', {
-            method: 'POST',
+            method: 'GET',
             headers: {
-                "accept": "*/*",
+                "accept": "*//*",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(reg)
 
         }).then(() => {
             console.log('new registracion');
-            /*setIsPending(fasle);*/
-        })
+            //setIsPending(fasle);
+        })*/
+alert(23);
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //document.getElementById("demo").innerHTML = this.responseText;
+            }
+            console.log(this);
+        };
+        xhttp.open("GET", "http://localhost:7070/api/admin/products/", true);
+        xhttp.send();
     }
 
     return (

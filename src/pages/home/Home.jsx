@@ -12,6 +12,13 @@ const Home = () => {
       <Navbar />
       <Header />
       <div className="homeContainer">
+
+        <input type="text" placeholder="Search" className="search" />
+        <ul className="list">
+          <li className="listItem">John</li>
+          <li className="listItem">Jane</li>
+          <li className="listItem">Mike</li>
+        </ul>
         {/*<Featured />
         <PropertyList />
         <FeaturedProperties />

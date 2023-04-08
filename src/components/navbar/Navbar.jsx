@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="navContainer"> 
             <Link to="/mymap" className="logo">.Mymap</Link>
             <div className="navItems">
-            <Link to="/mymap/registracion" className="logo"><button className="navButton">Bejelentkezés/Regisztráció</button></Link>
+            <span className="logo"><button className="navButton">Bejelentkezés/Regisztráció</button></span>
  
             </div>
         </div>
