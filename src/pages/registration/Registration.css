@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
 }
-.login, .registracion{
+.login, .registration{
     display: flex;
     flex-direction: column;
     width: 500px;

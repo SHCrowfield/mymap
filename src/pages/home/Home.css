@@ -27,7 +27,9 @@
     font-weight: 300;
 }
 
-
+.th{
+    padding: 50px;
+}
 /*keresés vége*/
 .background {
     width: 100%;

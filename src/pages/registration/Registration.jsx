@@ -1,14 +1,14 @@
 import { useState } from "react"
 import Header from "../../components/header/Header"
 import Navbar from "../../components/navbar/Navbar"
-import "./Registracion.css"
+import "./Registration.css"
 
-function Registracion() {
+function Registration() {
     const [identifier, setIdentifier] = useState('');
     const [password, setPassword] = useState('');
-    const [fname, setFname] = useState('');
-    const [lname, setLname] = useState('');
-    const [tel, setTel] = useState('');
+    const [firstname, setFname] = useState('');
+    const [lastname, setLname] = useState('');
+    const [phone, setTel] = useState('');
     const [email, setEmail] = useState('');
     const [country, setCountry] = useState('Magyarország');
     const [city, setCity] = useState('');
@@ -19,34 +19,33 @@ function Registracion() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const reg = { identifier, password, fname, lname, tel, email, address:{ country, city, street, postcode}, active };
+        const reg = { identifier, password, firstname, lastname, phone, email, address:{ country, city, street, postcode}, active };
         setIsPending(true);
         console.log(reg);
 
-        /*
-        fetch('http://localhost:7070/api/admin/customers/', {
+       /* fetch('api/admin/products/', {
             method: 'GET',
             headers: {
-                "accept": "*//*",
                 "Content-Type": "application/json"
-            },
-            body: JSON.stringify(reg)
-
-        }).then(() => {
-            console.log('new registracion');
-            //setIsPending(fasle);
-        })*/
-alert(23);
-
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                //document.getElementById("demo").innerHTML = this.responseText;
             }
-            console.log(this);
-        };
-        xhttp.open("GET", "http://localhost:7070/api/admin/products/", true);
-        xhttp.send();
+        })
+        .then(response => response.json())
+        .then(data => console.log(data));*/
+
+
+fetch('api/admin/customers/', {
+    method: 'POST',
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(reg)
+
+ })
+ .then(response => response.json())
+ .then(data => console.log(data));
+
+
+
     }
 
     return (
@@ -63,7 +62,7 @@ alert(23);
                         <button className="btn">Bejelentkezés</button>
                     </form>
                     <hr />
-                    <form className="registracion" onSubmit={handleSubmit}>
+                    <form className="registration" onSubmit={handleSubmit}>
                         <span className="label">Regisztráció</span>
                         <label>Felhasználónév:</label>
                         <input
@@ -81,19 +80,19 @@ alert(23);
                         <label>Keresztnév: </label>
                         <input type="text"
                             required
-                            value={fname}
+                            value={firstname}
                             onChange={(e) => setFname(e.target.value)}
                             name="fname" />
                         <label>Vezetéknév:</label>
                         <input type="text"
                             required
-                            value={lname}
+                            value={lastname}
                             onChange={(e) => setLname(e.target.value)}
                             name="lname" />
                         <label>Telefonszám:</label>
                         <input type="tel"
                             required
-                            value={tel}
+                            value={phone}
                             onChange={(e) => setTel(e.target.value)}
                             name="phone" />
                         <label>Email:</label>
@@ -138,4 +137,4 @@ alert(23);
     )
 }
 
-export default Registracion
+export default Registration
