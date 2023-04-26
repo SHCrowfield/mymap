@@ -16,8 +16,9 @@ function Registration() {
     const [postcode, setPostcode] = useState('');
     const [active] = useState(true);
     const [isPending, setIsPending] = useState(false);
-    const [deleteId, setDeleteId] = useState('18');
-    const[listId, setListId] = useState('2');
+    const [deleteId, setDeleteId] = useState('');
+    const [listId, setListId] = useState('');
+    const [changeId, setChangeId] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -51,24 +52,33 @@ function Registration() {
     }
 
     const handleListId = () => {
-        //Listázás
+        //Listázás ID alapján
         fetch(`api/admin/customers/${listId}`, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json"
             }
         })
-            .then(response => response.json())
-            .then(data => console.log(data));
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Dunno what happened');
+                }
+                return response.json();
+            })
+            .then(data => {console.log(data)
+            })
+.catch(error => {
+                console.error('Valami baj  vót: ', error);
+            });
     }
-
+    //módosít
     const changeData = (e) => {
         e.preventDefault();
         const reg = { identifier, password, firstname, lastname, phone, email, address: { country, city, street, postcode }, active };
         setIsPending(true);
         console.log(reg);
 
-        fetch('api/admin/customers/2', {
+        fetch(`api/admin/customers/${changeId}`, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json"
@@ -76,8 +86,18 @@ function Registration() {
             body: JSON.stringify(reg)
 
         })
-            .then(response => response.json())
-            .then(data => console.log(data));
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Dunno what happened');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Valami baj  vót: ', error);
+            });
     }
 
     const handleDelete = () => {
@@ -181,13 +201,15 @@ function Registration() {
                             name="postcode" />
 
                         <button className="btn" onClick={handleSubmit}>Regisztráció</button>
+                        <input type="number" value={changeId} onChange={e => setChangeId(e.target.value)} />
                         <button className="btn" onClick={changeData}>Módosít</button>
                         <div>
                             <input type="number" value={deleteId} onChange={e => setDeleteId(e.target.value)} />
-                            <button onClick={handleDelete}>Törölni</button>
-                            <button onClick={handleList}>Listázni</button>
+                            <button className="btn" onClick={handleDelete}>Törölni</button>
+                            <button className="btn" onClick={handleList}>Listázni</button><br />
+                            <label>Listázás ID alapján: </label>
                             <input type="number" value={listId} onChange={e => setListId(e.target.value)} />
-                            <button onClick={handleListId}>Adatok listázása</button>
+                            <button className="btn" onClick={handleListId}>Adatok listázása</button>
                         </div>
                     </form>
                 </div>
