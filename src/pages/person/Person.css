@@ -42,3 +42,43 @@
     font-size: 18px;
     font-weight: 300;
 }
+
+@media screen and (max-width:940px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .personContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .rightSide {
+        margin-right: 0px;
+    }
+
+     .leftSide{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .centerSide{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightSide{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

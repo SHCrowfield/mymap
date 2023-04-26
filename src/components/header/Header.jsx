@@ -1,67 +1,53 @@
 import "./Header.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faBed, faBook, faCalendarDays, faImage, faLightbulb, faPerson, faUser
+  faBars, faBook, faTimes, faFontAwesome, faImage, faLightbulb, faPerson, faUser, faHome
 } from "@fortawesome/free-solid-svg-icons"
-import { DateRange } from 'react-date-range';
 import { useState } from "react";
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import { format } from "date-fns"
-import { Link } from "react-router-dom";
-
-const Header = ({ type }) => {
-  const [openDate, setOpenDate] = useState(false)
-  const [date, setDate] = useState([
-    {
-      startDate: new Date(),
-      endDate: new Date(),
-      key: 'selection'
-    }
-  ]);
-  const [openOptions, setOpenOptions] = useState(false)
-  const [options, setOptions] = useState({
-    adult: 1,
-    children: 0,
-    room: 1
-
-  });
+import { NavLink } from "react-router-dom";
 
 
-  const handleOption = (name, operation) => {
-    setOptions(prev => {
-      return {
-        ...prev,
-        [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
-      };
-    });
-  };
+
+const Header = () => {
 
   return (
     <div className="header">
       <div className="headerContainer">
         <div className="headerList">
-          <div className="headerListItem active">
-            
-            <Link to="/mymap/person" className="link"><FontAwesomeIcon icon={faUser} /></Link>
+          <div className="headerListItem">
+          <NavLink to="/" className={(navData) => (navData.isActive ? "active" : 'link')}>
+              <FontAwesomeIcon icon={faHome} className="icon" />
+            </NavLink>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faBook} />
-            <span></span>
+          <NavLink to="/person" className={(navData) => (navData.isActive ? "active" : 'link')}>
+              <FontAwesomeIcon icon={faUser} className="icon" />
+            </NavLink>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faPerson} />
-            <span></span>
+          <NavLink to="/registration" className={(navData) => (navData.isActive ? "active" : 'link')}>
+              <FontAwesomeIcon icon={faBook} className="icon" />
+            </NavLink>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faImage} />
-            <span></span>
+          <NavLink to="/notyet" className={(navData) => (navData.isActive ? "active" : 'link')}>
+          <FontAwesomeIcon icon={faPerson} className="icon" />
+          </NavLink>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faLightbulb} />
-            <span></span>
+          <NavLink to="/notyet" className={(navData) => (navData.isActive ? "active" : 'link')}>
+              <FontAwesomeIcon icon={faImage} className="icon" />
+            </NavLink>
+          </div>
+          <div className="headerListItem">
+          <NavLink to="/notyet" className={(navData) => (navData.isActive ? "active" : 'link')}>
+              <FontAwesomeIcon icon={faLightbulb} className="icon" />
+            </NavLink>
           </div>
         </div>
+
 
       </div>
     </div>

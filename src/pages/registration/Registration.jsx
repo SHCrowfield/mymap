@@ -16,42 +16,96 @@ function Registration() {
     const [postcode, setPostcode] = useState('');
     const [active] = useState(true);
     const [isPending, setIsPending] = useState(false);
+    const [deleteId, setDeleteId] = useState('18');
+    const[listId, setListId] = useState('2');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const reg = { identifier, password, firstname, lastname, phone, email, address:{ country, city, street, postcode}, active };
+        const reg = { identifier, password, firstname, lastname, phone, email, address: { country, city, street, postcode }, active };
         setIsPending(true);
         console.log(reg);
 
-       /* fetch('api/admin/products/', {
+        //Mentés
+        fetch('api/admin/customers/', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(reg)
+
+        })
+            .then(response => response.json())
+            .then(data => console.log(data));
+    }
+
+    const handleList = () => {
+        //Listázás
+        fetch('api/admin/customers/', {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json"
             }
         })
-        .then(response => response.json())
-        .then(data => console.log(data));*/
+            .then(response => response.json())
+            .then(data => console.log(data));
+    }
 
+    const handleListId = () => {
+        //Listázás
+        fetch(`api/admin/customers/${listId}`, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(response => response.json())
+            .then(data => console.log(data));
+    }
 
-fetch('api/admin/customers/', {
-    method: 'POST',
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(reg)
+    const changeData = (e) => {
+        e.preventDefault();
+        const reg = { identifier, password, firstname, lastname, phone, email, address: { country, city, street, postcode }, active };
+        setIsPending(true);
+        console.log(reg);
 
- })
- .then(response => response.json())
- .then(data => console.log(data));
+        fetch('api/admin/customers/2', {
+            method: 'PUT',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(reg)
 
+        })
+            .then(response => response.json())
+            .then(data => console.log(data));
+    }
 
+    const handleDelete = () => {
+        //Törlés
+        fetch(`api/admin/customers/${deleteId}`, {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json"
+            }
 
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error('Dunno what happened');
+            }
+            return 'Jó volt';
+        })
+            .then(data => {
+                console.log('Sikeresen törölve: ', data);
+            })
+            .catch(error => {
+                console.error('Valami baj  vót: ', error);
+            })
     }
 
     return (
         <div><Navbar /><Header />
             <div className="regContainer">
-                <div>
+                <div className="reg">
                     <span className="label">Bejelentkezés</span>
                     <form className="login">
                         <label>Felhasználónév: </label>
@@ -62,7 +116,7 @@ fetch('api/admin/customers/', {
                         <button className="btn">Bejelentkezés</button>
                     </form>
                     <hr />
-                    <form className="registration" onSubmit={handleSubmit}>
+                    <form className="registration">
                         <span className="label">Regisztráció</span>
                         <label>Felhasználónév:</label>
                         <input
@@ -126,10 +180,15 @@ fetch('api/admin/customers/', {
                             required
                             name="postcode" />
 
-                        {!isPending && <button className="btn">Regisztráció</button>}
-                        {isPending && <button disabled className="btn">Regisztráció....</button>}
-
-
+                        <button className="btn" onClick={handleSubmit}>Regisztráció</button>
+                        <button className="btn" onClick={changeData}>Módosít</button>
+                        <div>
+                            <input type="number" value={deleteId} onChange={e => setDeleteId(e.target.value)} />
+                            <button onClick={handleDelete}>Törölni</button>
+                            <button onClick={handleList}>Listázni</button>
+                            <input type="number" value={listId} onChange={e => setListId(e.target.value)} />
+                            <button onClick={handleListId}>Adatok listázása</button>
+                        </div>
                     </form>
                 </div>
             </div>

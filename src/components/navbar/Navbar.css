@@ -1,22 +1,23 @@
 .navbar {
     height: 50px;
-    background-color: #26C36C;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
+    margin: 10px 20px;
 }
 
 .navContainer {
     width: 100%;
     max-width: 1024px;
-    color: white;
+    color: #26C36C;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
-    font-weight: 500;
-    font-size: 40px;
+    font-family: "Poppins";
+    width: 200px;
     color: white;
     text-decoration: none;
 }
@@ -30,4 +31,90 @@
     border: 0;
     border-radius: 8px;
 
+}
+
+.icon {
+    width: 20px;
+    height: auto;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navList {
+    display: none;
+}
+
+@media screen and (max-width:940px) {
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navList {
+        display: flex;
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+        text-align: center;
+        transition: .3s;
+    }
+
+    .navList.active {
+        left: -5%;
+    }
+
+
+    .navListItem {
+        margin: 2rem 0;
+        font-size: 35px;
+    }
+
+    .navItems{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .navLink{
+        color: #26C36C;
+        text-decoration: none;
+    }
+    .navListSpan{
+        text-decoration: none;
+        color: #26C36C;
+        padding: 10px;
+    }
+    .active{
+        background-color: #ffffff;
+    }
+
+    .navbar{
+        height: 100px;
+    }
+
+    .icon{
+        width: 50px;
+        height: auto;
+    }
+
+    .logo{
+        width: 300px;
+        height: auto;
+    }
+    .navButton{
+        width: auto;
+        height: auto;
+        font-size: 25px;
+        padding: 10px;
+        ;
+    }
 }

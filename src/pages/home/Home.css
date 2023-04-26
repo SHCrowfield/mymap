@@ -12,6 +12,9 @@
 .search{
     padding: 10px;
     font-size: 20px;
+    position: absolute;
+    z-index: 2;
+margin: 10px;
 }
 
 .list{
@@ -47,14 +50,3 @@
     position: relative;
 }
 
-.myMap {
-
-    display: flex;
-    font-size: 200px;
-    color: #26c36c;
-    position: absolute;
-    z-index: 1;
-    padding-left: 50%;
-    text-shadow: 10px 5px 5px black;
-
-}

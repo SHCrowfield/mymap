@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import List from "./pages/list/List";
-import Hotel from './pages/hotel/Hotel';
+import Notyet from './pages/notyet/Notyet';
 import Home from "./pages/home/Home";
 import Person from "./pages/person/Person";
 import Registration from "./pages/registration/Registration";
@@ -17,11 +17,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/mymap" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/registration" element={<Registration />} />
-        <Route path="/mymap/person" element={<Person />} />
-        <Route path="/mymap/hotels" element={<List />} />
-        <Route path="/mymap/hotels/:id" element={<Hotel />} />
+        <Route path="/person" element={<Person />} />
+        <Route path="/hotels" element={<List />} />
+        <Route path="/notyet" element={<Notyet />} />
       </Routes>
     </BrowserRouter>
   );

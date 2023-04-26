@@ -1,17 +1,28 @@
-.regContainer{
+.regContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.login, .registration{
+
+.reg{
     display: flex;
     flex-direction: column;
-    width: 500px;
-  margin: 30px;
+    width: 100%;
+    max-width: 1024px;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn{
+.login,
+.registration {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 30px;
+}
+
+.btn {
     background: #26C36C;
     color: #000;
     margin: 10px;
@@ -21,6 +32,8 @@
     cursor: pointer;
 }
 
-.label{
+.label {
     font-size: 40px;
 }
+
+
