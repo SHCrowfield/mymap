@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/mymap/static/css/main.e339db8a.css",
-    "main.js": "/mymap/static/js/main.2a0f660b.js",
+    "main.css": "/mymap/static/css/main.d5d4eccb.css",
+    "main.js": "/mymap/static/js/main.87f10ba4.js",
+    "static/media/background.png": "/mymap/static/media/background.5981acca3cb45db90b35.png",
     "static/media/bb.png": "/mymap/static/media/bb.57e168fb7a6a2841fc66.png",
+    "static/media/Poppins-Regular.ttf": "/mymap/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/pp.png": "/mymap/static/media/pp.5157d36ffaae361051ec.png",
+    "static/media/logocim.png": "/mymap/static/media/logocim.b8e9c93ee78f11ad7928.png",
     "index.html": "/mymap/index.html",
-    "main.e339db8a.css.map": "/mymap/static/css/main.e339db8a.css.map",
-    "main.2a0f660b.js.map": "/mymap/static/js/main.2a0f660b.js.map"
+    "main.d5d4eccb.css.map": "/mymap/static/css/main.d5d4eccb.css.map",
+    "main.87f10ba4.js.map": "/mymap/static/js/main.87f10ba4.js.map"
   },
   "entrypoints": [
-    "static/css/main.e339db8a.css",
-    "static/js/main.2a0f660b.js"
+    "static/css/main.d5d4eccb.css",
+    "static/js/main.87f10ba4.js"
   ]
 }
