@@ -39,15 +39,16 @@
     height: auto;
 }
 
-.active {
+.akt {
     color: #ffffff;
     padding: 15px 18px;
     margin: 15px;
     border-radius: 10px;
     background-color: #26C36C;
+    
 }
 
-.active>.icon {
+.akt>.icon {
     color: #ffffff;
 }
 

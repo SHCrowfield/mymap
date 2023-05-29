@@ -4,38 +4,43 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
-
+    max-width: 1024px;
+    justify-content: center;
 }
 
 
 /*keresés*/
-.search{
+.search {
     padding: 10px;
     font-size: 20px;
     position: absolute;
     z-index: 2;
-margin: 10px;
+    margin: 10px;
 }
 
-.list{
+.list {
     padding: 0;
     list-style: none;
     text-align: center;
 }
 
-.listItem{
+.listItem {
     margin-bottom: 20px;
     font-size: 25px;
     color: #444;
     font-weight: 300;
 }
 
-.th{
+.th {
     padding: 50px;
 }
+
 /*keresés vége*/
 .background {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -45,8 +50,10 @@ margin: 10px;
 }
 
 .backImg {
+    left: 25%;
     display: flex;
     width: 100%;
     position: relative;
+    justify-content: center;
+    align-items: center;
 }
-

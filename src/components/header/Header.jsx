@@ -1,7 +1,7 @@
 import "./Header.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faBars, faBook, faTimes, faFontAwesome, faImage, faLightbulb, faPerson, faUser, faHome
+faBook, faImage, faLightbulb, faPerson, faUser, faHome
 } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react";
 import 'react-date-range/dist/styles.css'; // main css file
@@ -17,32 +17,32 @@ const Header = () => {
       <div className="headerContainer">
         <div className="headerList">
           <div className="headerListItem">
-          <NavLink to="/" className={(navData) => (navData.isActive ? "active" : 'link')}>
+          <NavLink to="/" className={(navData) => (navData.isActive ? "akt" : 'link')}>
               <FontAwesomeIcon icon={faHome} className="icon" />
             </NavLink>
           </div>
           <div className="headerListItem">
-          <NavLink to="/person" className={(navData) => (navData.isActive ? "active" : 'link')}>
+          <NavLink to="/person" className={(navData) => (navData.isActive ? "akt" : 'link')}>
               <FontAwesomeIcon icon={faUser} className="icon" />
             </NavLink>
           </div>
           <div className="headerListItem">
-          <NavLink to="/registration" className={(navData) => (navData.isActive ? "active" : 'link')}>
+          <NavLink to="/notyet" className={(navData) => (navData.isActive ? "akt" : 'link')}>
               <FontAwesomeIcon icon={faBook} className="icon" />
             </NavLink>
           </div>
           <div className="headerListItem">
-          <NavLink to="/notyet" className={(navData) => (navData.isActive ? "active" : 'link')}>
+          <NavLink to="/competence" className={(navData) => (navData.isActive ? "akt" : 'link')}>
           <FontAwesomeIcon icon={faPerson} className="icon" />
           </NavLink>
           </div>
           <div className="headerListItem">
-          <NavLink to="/notyet" className={(navData) => (navData.isActive ? "active" : 'link')}>
+          <NavLink to="/notyet" className={(navData) => (navData.isActive ? "akt" : 'link')}>
               <FontAwesomeIcon icon={faImage} className="icon" />
             </NavLink>
           </div>
           <div className="headerListItem">
-          <NavLink to="/notyet" className={(navData) => (navData.isActive ? "active" : 'link')}>
+          <NavLink to="/notyet" className={(navData) => (navData.isActive ? "akt" : 'link')}>
               <FontAwesomeIcon icon={faLightbulb} className="icon" />
             </NavLink>
           </div>

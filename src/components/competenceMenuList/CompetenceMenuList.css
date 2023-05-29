@@ -1,0 +1,15 @@
+.competenceMenuList {
+    font-size: 14px;
+    margin-right: 50px;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+
+}
+
+.aktiv {
+    background-color: #26c36c;
+    color: white;
+}

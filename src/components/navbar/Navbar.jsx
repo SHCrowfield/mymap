@@ -24,7 +24,7 @@ const Navbar = () => {
               : (<FontAwesomeIcon icon={faBars} className="icon" />)}
           </div>
         </div>
-        <div className={click ? "navList active" : "navList"}>
+        <div className={click ? "navList act" : "navList"}>
           <div className="navListItem">
             <NavLink to="/" className="navLink">
               <FontAwesomeIcon icon={faHome} className="link" onClick={CloseMenu} />
@@ -38,27 +38,27 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div className="navListItem">
-            <NavLink to="/registration" className="navLink">
+            <NavLink to="/competence" className="navLink">
               <FontAwesomeIcon icon={faBook} className="link" onClick={CloseMenu} />
-              <span className="navListSpan">Regisztráció</span>
+              <span className="navListSpan">Kompetenciatár</span>
             </NavLink>
           </div>
           <div className="navListItem">
             <NavLink to="/notyet" className="navLink">
               <FontAwesomeIcon icon={faPerson} className="link" onClick={CloseMenu} />
-              <span className="navListSpan">Személyiség-tár</span>
+              <span className="navListSpan">Céltár</span>
             </NavLink>
           </div>
           <div className="navListItem">
             <NavLink to="/notyet" className="navLink">
               <FontAwesomeIcon icon={faImage} className="link" onClick={CloseMenu} />
-              <span className="navListSpan">Kép-tár</span>
+              <span className="navListSpan">Dokutár</span>
             </NavLink>
           </div>
           <div className="navListItem">
             <NavLink to="/notyet" className="navLink">
               <FontAwesomeIcon icon={faLightbulb} className="link" onClick={CloseMenu} />
-              <span className="navListSpan">Idea-tár</span>
+              <span className="navListSpan">Ötlettár</span>
             </NavLink>
           </div>
         </div>

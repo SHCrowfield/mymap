@@ -25,8 +25,8 @@ const Home = () => {
       <Header />
       <div className="homeContainer">
 
-        <input type="text" placeholder="Search" className="search" onChange={(e) => setQuery(e.target.value)} />
-        {/*<Table data={search(Users)} />*/}
+        {/*<input type="text" placeholder="Search" className="search" onChange={(e) => setQuery(e.target.value)} />
+        <Table data={search(Users)} />*/}
 
 
         <div className="background">

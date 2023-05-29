@@ -6,7 +6,7 @@ import bb from "./bb.png"
 
 function Person() {
 
-    const user1 = {
+    const user = {
 
         uImg: pp,
         nev: "Pályakezdő Péter",
@@ -17,14 +17,10 @@ function Person() {
         bio: "Kertészmérnöknek tanultam, dekedvenc időtöltésem a fotózás és videóklippek forgatása.",
         quote: "Ne várj a pillanatra, hanem csináld meg te magad!",
         motivations: "Világot látni, és mindig új kihívásokat keresni",
-        jobs: "Elhelyezkedni kertészmérnökként és parkok, kertek tervezésével foglalkozni egy vállalkozásnál. Fotó tanfolyamokon részt venni és képszerkesztést tanulni",
-        factors: "Felhasználó barát, könnyű használat Látványos és áttekinthető",
-        gains: "Több téren is hasznosítható Megbízható, napra kész információk beszerzése",
-        communication: "Socal media Facebook, Instagram, Tiktok Influenszer posztok és videók, rövid videók az oldal használatáról"
-
+        jobs: "Elhelyezkedni kertészmérnökként és parkok, kertek tervezésével foglalkozni egy vállalkozásnál. Fotó tanfolyamokon részt venni és képszerkesztést tanulni"
     };
 
-    const user = {
+    const user1 = {
 
         uImg: bb,
         nev: "Bizonytalan Bence",
@@ -35,11 +31,7 @@ function Person() {
         bio: "18 éves vagyok, informatikusnak tanulok Veszprémbe lakom, de mindig is vágyam volt Bp-en élni Még nem tudom, hogy tovább tanuljak-e, de buli lehet egyetemistának lenni",
         quote: "Mindenkinek megvan a saját útja, és ezt az utat sajnos mindenkinek magának kell megkeresnie.",
         motivations: "Sikeres szeretnék lenni és sok pénzt keresni, megtalálni azt a munkát amit szívesen csinálnék",
-        jobs: "",
-        factors: "Gyors és egyszerű használat. Design-os  kinézet, ingyenes funciók",
-        gains: "Több téren is hasznosítható Megbízható, napra kész információk beszerzése",
-        communication: "Socal media Facebook, Instagram, Tiktok Influenszer posztok és videók"
-
+        jobs: ""
     };
 
 
@@ -65,32 +57,17 @@ function Person() {
                         <h2>{user.quote}</h2>
 
                     </div>
-                    <div className="personData">
-                        <h1>Motivations (goals)</h1>
+
+                </div>
+                <div className="rightSide">
+                <div className="personData">
+                        <h1>Motiváció</h1>
                         <h2>{user.motivations}</h2>
 
                     </div>
                     <div className="personData">
-                        <h1>Jobs to be Done</h1>
+                        <h1>Amit szeretnék</h1>
                         <h2>{user.jobs}</h2>
-
-                    </div>
-                </div>
-                <div className="rightSide">
-
-                    <div className="personData">
-                        <h1>Factors influencing buying decisions</h1>
-                        <h2>{user.factors}</h2>
-
-                    </div>
-                    <div className="personData">
-                        <h1>Gains from my product</h1>
-                        <h2>{user.gains}</h2>
-
-                    </div>
-                    <div className="personData">
-                        <h1>Communication</h1>
-                        <h2>{user.communication}</h2>
 
                     </div>
                 </div>

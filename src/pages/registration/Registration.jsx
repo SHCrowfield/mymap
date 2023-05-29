@@ -129,9 +129,9 @@ function Registration() {
                     <span className="label">Bejelentkezés</span>
                     <form className="login">
                         <label>Felhasználónév: </label>
-                        <input type="text" name="username" />
+                        <input className ="input" type="text" name="username" />
                         <label>Jelszó: </label>
-                        <input type="password" name="password" />
+                        <input className ="input" type="password" name="password" />
 
                         <button className="btn">Bejelentkezés</button>
                     </form>
@@ -139,76 +139,76 @@ function Registration() {
                     <form className="registration">
                         <span className="label">Regisztráció</span>
                         <label>Felhasználónév:</label>
-                        <input
+                        <input className ="input"
                             type="text"
                             required
                             value={identifier}
                             onChange={(e) => setIdentifier(e.target.value)}
                             name="username" />
                         <label>Jelszó: </label>
-                        <input type="password"
+                        <input className ="input" type="password"
                             required
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             name="password" />
                         <label>Keresztnév: </label>
-                        <input type="text"
+                        <input className ="input" type="text"
                             required
                             value={firstname}
                             onChange={(e) => setFname(e.target.value)}
                             name="fname" />
                         <label>Vezetéknév:</label>
-                        <input type="text"
+                        <input className ="input" type="text"
                             required
                             value={lastname}
                             onChange={(e) => setLname(e.target.value)}
                             name="lname" />
                         <label>Telefonszám:</label>
-                        <input type="tel"
+                        <input className ="input" type="tel"
                             required
                             value={phone}
                             onChange={(e) => setTel(e.target.value)}
                             name="phone" />
                         <label>Email:</label>
-                        <input type="email"
+                        <input className ="input" type="email"
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             name="email" />
                         <label>Ország: </label>
-                        <input type="text"
+                        <input className ="input" type="text"
                             required
                             value={country}
                             onChange={(e) => setCountry(e.target.value)}
                             name="country" />
                         <label>Város: </label>
-                        <input type="text"
+                        <input className ="input" type="text"
                             value={city}
                             onChange={(e) => setCity(e.target.value)}
                             required
                             name="city" />
                         <label>Utca:</label>
-                        <input type="text"
+                        <input className ="input" type="text"
                             value={street}
                             onChange={(e) => setStreet(e.target.value)}
                             required
                             name="street" />
                         <label>Irányítószám: </label>
-                        <input type="text"
+                        <input className ="input" type="text"
                             value={postcode}
                             onChange={(e) => setPostcode(e.target.value)}
                             required
                             name="postcode" />
 
                         <button className="btn" onClick={handleSubmit}>Regisztráció</button>
-                        <input type="number" value={changeId} onChange={e => setChangeId(e.target.value)} />
+                        <input className ="input" type="number" value={changeId} onChange={e => setChangeId(e.target.value)} />
                         <button className="btn" onClick={changeData}>Módosít</button>
                         <div>
-                            <input type="number" value={deleteId} onChange={e => setDeleteId(e.target.value)} />
+                            <input className ="input" type="number" value={deleteId} onChange={e => setDeleteId(e.target.value)} />
                             <button className="btn" onClick={handleDelete}>Törölni</button>
                             <button className="btn" onClick={handleList}>Listázni</button><br />
                             <label>Listázás ID alapján: </label>
-                            <input type="number" value={listId} onChange={e => setListId(e.target.value)} />
+                            <input className ="input" type="number" value={listId} onChange={e => setListId(e.target.value)} />
                             <button className="btn" onClick={handleListId}>Adatok listázása</button>
                         </div>
                     </form>
