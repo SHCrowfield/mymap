@@ -36,7 +36,7 @@ function Person() {
 
 
     return (
-        <div><Navbar /><Header/>
+        <div><Navbar /><Header />
             <div className="personContainer">
                 <div className="leftSide">
                     <img src={user.uImg} alt="" className="personImg" />
@@ -53,14 +53,10 @@ function Person() {
 
                     </div>
                     <div className="personData">
-                        <h1>Quote</h1>
+                        <h1>Idézet</h1>
                         <h2>{user.quote}</h2>
-
                     </div>
-
-                </div>
-                <div className="rightSide">
-                <div className="personData">
+                    <div className="personData">
                         <h1>Motiváció</h1>
                         <h2>{user.motivations}</h2>
 
@@ -70,7 +66,20 @@ function Person() {
                         <h2>{user.jobs}</h2>
 
                     </div>
+
                 </div>
+                {/*<div className="rightSide">
+                    <div className="personData">
+                        <h1>Motiváció</h1>
+                        <h2>{user.motivations}</h2>
+
+                    </div>
+                    <div className="personData">
+                        <h1>Amit szeretnék</h1>
+                        <h2>{user.jobs}</h2>
+
+                    </div>
+                </div>*/}
             </div>
         </div>
 

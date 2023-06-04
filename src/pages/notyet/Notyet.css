@@ -1,4 +1,6 @@
 .notyetContainer {
     color: red;
     font-size: 300px;
+    display: flex;
+    justify-content: center;
 }

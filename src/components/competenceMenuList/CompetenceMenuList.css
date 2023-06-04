@@ -5,8 +5,11 @@
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 10px;
+}
 
-
+.competenceMenuList:hover {
+    background-color: rgba(38, 195, 108, 0.4);
+    color: black;
 }
 
 .aktiv {

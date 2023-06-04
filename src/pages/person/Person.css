@@ -1,7 +1,6 @@
 .personContainer {
     display: flex;
     justify-content: space-evenly;
-
 }
 
 .leftSide {
@@ -11,7 +10,7 @@
 
 .centerSide {
     padding: 10px;
-    width: 30%;
+    width: 50%;
 }
 
 .rightSide {

@@ -151,7 +151,7 @@ const Competence = () => {
                     checked={selectedOption2 === 'option3'}
                     onChange={handleOption2Change}
                   />
-                  <span className="answer">A Tincs</span>
+                  <span className="answer">A Kozsótincs</span>
                 </div>
                 <div className="valasz">
                   <input type="radio"
